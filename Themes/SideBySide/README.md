@@ -1,87 +1,72 @@
-# SideBySide theme for Windows 11 Start Menu Styler
-
-**Author**: [kaoshipaws](https://k4oshi.top/)
-
-![Screenshot](screenshot.png)
-
-## Theme selection
-
-The theme is integrated into the mod, and can be simply selected from the mod's
-settings:
-
-* Open the Windows 11 Start Menu Styler mod in Windhawk.
-* Go to the "Settings" tab.
-* Select the theme and save the settings.
-
-## Manual installation
-
-The theme styles can also be imported manually. To do that, follow these steps:
-
-* Open the Windows 11 Start Menu Styler mod in Windhawk.
-* Go to the "Advanced" tab.
-* Copy the content below to the text box under "Mod settings" and click "Save".
-
-<details>
-<summary>Content to import (click to expand)</summary>
-
-```json
-{
-  "controlStyles[0].target": "Grid#UndockedRoot",
-  "controlStyles[0].styles[0]": "MaxWidth=700",
-  "controlStyles[0].styles[1]": "Margin=0,0,300,0",
-  "controlStyles[1].target": "Grid#AllAppsRoot",
-  "controlStyles[1].styles[0]": "Visibility=Visible",
-  "controlStyles[1].styles[1]": "MinWidth=390",
-  "controlStyles[1].styles[2]": "Padding=-40,0,110,0",
-  "controlStyles[1].styles[3]": "Background:=<AcrylicBrush TintColor=\"{ThemeResource CardStrokeColorDefaultSolid}\" FallbackColor=\"{ThemeResource CardStrokeColorDefaultSolid}\" TintOpacity=\"0\" TintLuminosityOpacity=\"1\" Opacity=\"1\"/>",
-  "controlStyles[1].styles[4]": "Margin=-300,0,745,1",
-  "controlStyles[2].target": "Windows.UI.Xaml.Controls.Button#CloseAllAppsButton",
-  "controlStyles[2].styles[0]": "Visibility=Collapsed",
-  "controlStyles[3].target": "StartDocked.StartSizingFrame",
-  "controlStyles[3].styles[0]": "MaxWidth=860",
-  "controlStyles[3].styles[1]": "Width=860",
-  "controlStyles[4].target": "Windows.UI.Xaml.Controls.Button#ShowAllAppsButton",
-  "controlStyles[4].styles[0]": "Visibility=Collapsed",
-  "controlStyles[5].target": "Windows.UI.Xaml.Controls.TextBlock#PinnedListHeaderText",
-  "controlStyles[5].styles[0]": "Margin=-22,-5,0,0",
-  "controlStyles[6].target": "Grid#TopLevelSuggestionsListHeader",
-  "controlStyles[6].styles[0]": "Margin=45,-15,0,0",
-  "controlStyles[7].target": "StartDocked.AllAppsGridListView > Windows.UI.Xaml.Controls.ScrollViewer > Border > Grid > Windows.UI.Xaml.Controls.Primitives.ScrollBar",
-  "controlStyles[7].styles[0]": "Margin=-8,0,8,2",
-  "controlStyles[8].target": "Microsoft.UI.Xaml.Controls.PipsPager#PinnedListPipsPager",
-  "controlStyles[8].styles[0]": "Margin=-8,0,8,0",
-  "controlStyles[9].target": "Windows.UI.Xaml.Controls.ItemsWrapGrid > Windows.UI.Xaml.Controls.GridViewItem",
-  "controlStyles[9].styles[0]": "MaxWidth=185",
-  "controlStyles[9].styles[1]": "MinWidth=85",
-  "controlStyles[10].target": "StartMenu.PinnedList#StartMenuPinnedList",
-  "controlStyles[10].styles[0]": "Margin=-15,0,5,0",
-  "controlStyles[11].target": "Grid#ShowMoreSuggestions",
-  "controlStyles[11].styles[0]": "Margin=0,20,0,-20",
-  "controlStyles[12].target": "Grid#MoreSuggestionsRoot",
-  "controlStyles[12].styles[0]": "Margin=-1,0,-4,-30",
-  "controlStyles[13].target": "Windows.UI.Xaml.Controls.TextBlock#MoreSuggestionsListHeaderText",
-  "controlStyles[13].styles[0]": "Margin=-40,0,0,0",
-  "controlStyles[14].target": "Button#ShowMoreSuggestionsButton",
-  "controlStyles[14].styles[0]": "Margin=0,-58,25,0",
-  "controlStyles[15].target": "Grid#TopLevelSuggestionsContainer",
-  "controlStyles[15].styles[0]": "Margin=30,-10,30,-60",
-  "controlStyles[16].target": "Windows.UI.Xaml.Controls.GridViewItem",
-  "controlStyles[16].styles[0]": "Margin=0",
-  "controlStyles[17].target": "Border#AcrylicOverlay",
-  "controlStyles[17].styles[0]": "Background:=<AcrylicBrush TintColor=\"{ThemeResource CardStrokeColorDefaultSolid}\" FallbackColor=\"{ThemeResource CardStrokeColorDefaultSolid}\" TintOpacity=\"0.1\" TintLuminosityOpacity=\"1\" Opacity=\"1\"/>",
-  "controlStyles[18].target": "Windows.UI.Xaml.Controls.SemanticZoom#ZoomControl",
-  "controlStyles[18].styles[0]": "IsZoomOutButtonEnabled=true",
-  "controlStyles[19].target": "Windows.UI.Xaml.Controls.Button#ZoomOutButton > Windows.UI.Xaml.Controls.ContentPresenter#ContentPresenter > Windows.UI.Xaml.Controls.TextBlock",
-  "controlStyles[19].styles[0]": "Text=",
-  "controlStyles[20].target": "Windows.UI.Xaml.Controls.Button#ZoomOutButton",
-  "controlStyles[20].styles[0]": "Width=24",
-  "controlStyles[20].styles[1]": "Height=24",
-  "controlStyles[20].styles[2]": "FontSize=14",
-  "controlStyles[20].styles[3]": "CornerRadius=4",
-  "controlStyles[20].styles[4]": "VerticalAlignment=0",
-  "controlStyles[20].styles[5]": "Margin=-8,-35,8,0",
-  "controlStyles[21].target": "Border#LayerBorder",
-  "controlStyles[21].styles[0]": "Background:=<AcrylicBrush TintColor=\"{ThemeResource CardStrokeColorDefaultSolid}\" FallbackColor=\"{ThemeResource CardStrokeColorDefaultSolid}\" TintOpacity=\"0.1\" TintLuminosityOpacity=\"1\" Opacity=\"1\"/>"
-}
-```
-</details>
+const Theme g_themeSideBySideTranslucent = {{
+    ThemeTargetStyles{L"Grid#UndockedRoot", {
+        L"MaxWidth=700",
+        L"Margin=0,0,300,0"}},
+    ThemeTargetStyles{L"Grid#AllAppsRoot", {
+       L"Visibility=Visible",
+       L"MinWidth=390",
+       L"Padding=-40,0,110,0",
+       L"Background=Transparent",
+       L"BorderThickness=0",
+       L"CornerRadius=15",
+       L"Margin=-300,0,745,1"}},
+    ThemeTargetStyles{L"Windows.UI.Xaml.Controls.Button#CloseAllAppsButton", {
+        L"Visibility=Collapsed"}},
+    ThemeTargetStyles{L"StartDocked.StartSizingFrame", {
+        L"MaxWidth=860",
+        L"Width=860"}},
+    ThemeTargetStyles{L"Windows.UI.Xaml.Controls.Button#ShowAllAppsButton", {
+        L"Visibility=Collapsed"}},
+    ThemeTargetStyles{L"Windows.UI.Xaml.Controls.TextBlock#PinnedListHeaderText", {
+        L"Margin=-22,-5,0,0"}},
+    ThemeTargetStyles{L"Grid#TopLevelSuggestionsListHeader", {
+        L"Margin=45,-15,0,0"}},
+    ThemeTargetStyles{L"StartDocked.AllAppsGridListView > Windows.UI.Xaml.Controls.ScrollViewer > Border > Grid > Windows.UI.Xaml.Controls.Primitives.ScrollBar", {
+        L"Margin=-8,0,8,2"}},
+    ThemeTargetStyles{L"Microsoft.UI.Xaml.Controls.PipsPager#PinnedListPipsPager", {
+        L"Margin=-8,0,8,0"}},
+    ThemeTargetStyles{L"Windows.UI.Xaml.Controls.ItemsWrapGrid > Windows.UI.Xaml.Controls.GridViewItem", {
+        L"MaxWidth=185",
+        L"MinWidth=85"}},
+    ThemeTargetStyles{L"StartMenu.PinnedList#StartMenuPinnedList", {
+        L"Margin=-15,0,5,0"}},
+    ThemeTargetStyles{L"Grid#ShowMoreSuggestions", {
+        L"Margin=0,20,0,-20"}},
+    ThemeTargetStyles{L"Grid#MoreSuggestionsRoot", {
+        L"Margin=-1,0,-4,-30"}},
+    ThemeTargetStyles{L"Windows.UI.Xaml.Controls.TextBlock#MoreSuggestionsListHeaderText", {
+        L"Margin=-40,0,0,0"}},
+    ThemeTargetStyles{L"Button#ShowMoreSuggestionsButton", {
+        L"Margin=0,-58,25,0"}},
+    ThemeTargetStyles{L"Grid#TopLevelSuggestionsContainer", {
+        L"Margin=30,-10,30,-60"}},
+    ThemeTargetStyles{L"Windows.UI.Xaml.Controls.GridViewItem", {
+        L"Margin=0"}},
+    ThemeTargetStyles{L"Border#AcrylicOverlay", {
+        L"Background:=<AcrylicBrush TintColor=\"{ThemeResource CardStrokeColorDefaultSolid}\" FallbackColor=\"{ThemeResource CardStrokeColorDefaultSolid}\" TintOpacity=\"0.1\" TintLuminosityOpacity=\"1\" Opacity=\"1\"/>"}},
+    ThemeTargetStyles{L"Windows.UI.Xaml.Controls.SemanticZoom#ZoomControl", {
+        L"IsZoomOutButtonEnabled=true"}},
+    ThemeTargetStyles{L"Windows.UI.Xaml.Controls.Button#ZoomOutButton > Windows.UI.Xaml.Controls.ContentPresenter#ContentPresenter > Windows.UI.Xaml.Controls.TextBlock", {
+        L"Text=\uE73F"}},
+    ThemeTargetStyles{L"Windows.UI.Xaml.Controls.Button#ZoomOutButton", {
+        L"Width=24",
+        L"Height=24",
+        L"FontSize=14",
+        L"CornerRadius=4",
+        L"VerticalAlignment=0",
+        L"Margin=-8,-35,8,0"}},
+    ThemeTargetStyles{L"Border#LayerBorder", {
+        L"Background:=<AcrylicBrush TintColor=\"{ThemeResource CardStrokeColorDefaultSolid}\" FallbackColor=\"{ThemeResource CardStrokeColorDefaultSolid}\" TintOpacity=\"0.1\" TintLuminosityOpacity=\"1\" Opacity=\"1\"/>"}},
+    ThemeTargetStyles{L"Border#AcrylicBorder", {  
+        L"Background:=<AcrylicBrush TintColor=\"Black\" TintLuminosityOpacity=\"0.12\" TintOpacity=\"0\" Opacity=\"1\" FallbackColor=\"#70262626\"/>",
+        L"BorderThickness=0",
+        L"CornerRadius=15"}},
+    ThemeTargetStyles{L"Border#BorderElement", {
+        L"Background:=<AcrylicBrush TintLuminosityOpacity=\"0.03\" TintOpacity=\"0\" Opacity=\"1\" FallbackColor=\"#70262626\"/>",
+        L"BorderThickness=0",
+        L"CornerRadius=10"}},
+    ThemeTargetStyles{L"Border#AcrylicOverlay", {
+        L"Visibility=Collapsed"}},
+    ThemeTargetStyles{L"Border#LayerBorder", {
+        L"Visibility=Collapsed"}},
+}};
